@@ -1,0 +1,62 @@
+﻿@using TaskNest.ViewModels.Authorization
+@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+}
+
+
+<div class="page-content pt-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 col-lg-10 col-md-12 m-auto">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="login_wrap widget-taber-content background-white">
+                            <div class="padding_eight_all bg-white">
+                                <div class="heading_s1">
+                                    <h1 class="mb-5">Create an Account</h1>
+                                    <p class="mb-30">Hesabin var? <a asp-action="SignIn">Daxil ol</a></p>
+                                </div>
+                                <form method="post">
+                                    <div class="form-group row">
+                                        <div class="col">
+                                            <input asp-for="FirstName" class="form-control" placeholder="First name" />
+                                            <span class="text-danger" asp-validation-for="FirstName"></span>
+                                        </div>
+                                        <div class="col">
+                                            <input asp-for="LastName" class="form-control" placeholder="First name" />
+                                            <span class="text-danger" asp-validation-for="LastName"></span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input asp-for="Username" class="form-control" placeholder="Username" />
+                                        <span class="text-danger" asp-validation-for="Username"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input asp-for="Email" class="form-control" placeholder="Email" />
+                                        <span class="text-danger" asp-validation-for="Email"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input asp-for="Password" class="form-control" placeholder="Password" />
+                                        <span class="text-danger" asp-validation-for="Password"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <input asp-for="ConfirmPassword" class="form-control" placeholder="Confirm password" />
+                                        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+                                    </div>
+                                    <div asp-validation-summary="ModelOnly"></div>
+                                    <div class="form-group mb-30">
+                                        <button type="submit" class="btn btn-fill-out btn-block hover-up font-weight-bold" name="login">Submit &amp; Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{ 
+    <partial name="~/Areas/Manage/Views/Shared/_ValidationPartial.cshtml" />
+}
