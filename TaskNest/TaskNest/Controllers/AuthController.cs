@@ -99,5 +99,12 @@ namespace TaskNest.Controllers
                 
             }
         }
+        //public IActionResult ResetPassword(ResetPasswordVM resetPasswordVM)
+        //{
+        //    if (!ModelState.IsValid)
+        //    {
+        //        return View(resetPasswordVM);
+        //    }
+        //}
     }
 }
